@@ -29,7 +29,8 @@ function App() {
     setIsLoading(true);
     setHasSearched(true);
     try {
-      const response = await fetch(`http://localhost:3001/api/search?query=${encodeURIComponent(searchQuery)}`);
+      const apiUrl = import.meta.env.PROD ? '/api/search' : 'http://localhost:3001/api/search';
+      const response = await fetch(`${apiUrl}?query=${encodeURIComponent(searchQuery)}`);
       if (response.ok) {
         const data = await response.json();
         setResults(data);
