@@ -1,10 +1,16 @@
 :root {
-  --bg-color: #0f172a; /* Slate 900 */
-  --card-bg: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity */
-  --highlight: #38bdf8; /* Sky 400 */
-  --highlight-hover: #0ea5e9; /* Sky 500 */
-  --text-primary: #f8fafc; /* Slate 50 */
-  --text-secondary: #94a3b8; /* Slate 400 */
+  --bg-color: #0f172a;
+  /* Slate 900 */
+  --card-bg: rgba(30, 41, 59, 0.7);
+  /* Slate 800 with opacity */
+  --highlight: #38bdf8;
+  /* Sky 400 */
+  --highlight-hover: #0ea5e9;
+  /* Sky 500 */
+  --text-primary: #f8fafc;
+  /* Slate 50 */
+  --text-secondary: #94a3b8;
+  /* Slate 400 */
   --border-color: rgba(255, 255, 255, 0.1);
   --glass-blur: blur(16px);
   --shadow-color: rgba(0, 0, 0, 0.5);
@@ -75,12 +81,14 @@ body {
 .search-input {
   width: 100%;
   padding: 1.25rem 1.5rem;
-  padding-right: 4rem; /* space for icon */
+  padding-right: 4rem;
+  /* space for icon */
   font-size: 1.1rem;
   color: var(--text-primary);
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 9999px; /* full pill */
+  border-radius: 9999px;
+  /* full pill */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   box-shadow: 0 10px 25px var(--shadow-color);
@@ -109,7 +117,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.search-input:focus ~ .search-icon {
+.search-input:focus~.search-icon {
   color: var(--highlight);
   opacity: 1;
 }
@@ -125,8 +133,15 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Results Grid */
@@ -179,6 +194,7 @@ body {
 
 /* Empty State / Not Found */
 .empty-state {
+  margin-top: 2rem;
   text-align: center;
   padding: 3rem;
   color: var(--text-secondary);
